@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding project by Annie Li</title>
+    <title>Rewind: A coding project by Annie Li</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@
     <!--Nav bar section-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/IMG_8678 2.jpg" class="d-inline-block align-text-top" width="30" height="24" > APP NAME</a>
+        <a class="navbar-brand" href="#"><img src="img/IMG_8678 2.jpg" class="d-inline-block align-text-top" width="30" height="24" > REWIND</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,22 +54,44 @@
     <!--Main section-->
     <main class="flex-shrink-0 ">
         <div class="container py-5 px-5 mt-5">
-            <h2 class="border-1 border-bottom border-dark"> The Code for App Name</h2>
+            <h2 class="border-1 border-bottom border-dark"> The Code for Rewind</h2>
             <div class="row row-cols-1 row-cols-md-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers">
                         <code class="language-javascript">
-                            //call hello world
-                            function HelloWorld(){
-                                alert("hello world");
-                            }
+//get values(string) from the page(controller func)
+function getValue(){
+    document.getElementById("alert").classList.add("invisible");
+    let userString=document.getElementById('userString').value;
+    let revString=resverseString(userString);
+    displayString(revString);
+}
+//reverse the string(logic func)
+function resverseString(userString){
+    let revString=[];
+    //rever string using for loop
+    for (let index = userString.length-1; index >= 0; index--) {
+        revString += userString[index];
+        
+        
+    }
+    return revString;
+}
+//display the resversed string(view func)
+function displayString(revString){
+    //write to the page
+    document.getElementById('msg').innerHTML=`Your string reversed is: ${revString}`;
+    //turn on alert, classList only remove perticular class(invisible)
+    document.getElementById('alert').classList.remove('invisible');
+}
+// 
                         </code>
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is structured in one function</p>
-                    <h5>Hello World</h5>
-                    <p> Hellow world is a function that display an alert with a message of "Hello world"</p>
+                    <p>The code is structured in three functions</p>
+                    <h5></h5>
+                    <p> display the resversed string with an alert, the alert is invisible when not press the button</p>
                 </div>
             </div>
         </div>

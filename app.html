@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding project by Annie Li</title>
+    <title>Rewind: A coding project by Annie Li</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +21,7 @@
     <!--Nav bar section-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/IMG_8678 2.jpg" class="d-inline-block align-text-top" width="30" height="24" > APP NAME</a>
+        <a class="navbar-brand" href="#"><img src="img/IMG_8678 2.jpg" class="d-inline-block align-text-top" width="30" height="24" > REWIND</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -50,8 +50,31 @@
     </nav>
     <!--Main section-->
     <main class="flex-shrink-0 ">
-        <div class= "container">
-
+        <div class= "container mt-2">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <h1 class="display-5 fw-bold 1h-1 mb-3">Rewind: A Coding Project</h1>
+                    <h4 class="lead">A javascript coding project that dispays a string in reverse</h4>
+                </div>
+                <div class="col">
+                    <h5 class="border-1 border-bottom border-danger ">Enter a string to reverse:</h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col">
+                            <input id="userString" type='text' class="form-control" placeholder="Enter a String" aria-label="Enter a String" >
+                        </div>
+                        <div class="col-12" >
+                            <button type="button" id="btnSubmit" class="btn btn-danger" >Reverse Me</button>
+                        </div>
+                        <div class="alert alert-danger mt-5 invisible fade show" id="alert" role="Alert">
+                            <h5 class="alert-heading">Well Done!</h5>
+                            <hr>
+                            <p class="mb-0" id="msg">
+                                <!--insert message here-->
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -83,5 +106,8 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <script src="js/cite.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click",getValue);
+    </script>
 </body>
 </html>

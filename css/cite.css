@@ -10,8 +10,8 @@ main>.container {
 }
 
 :root{
-    --primary-color: #1d5888;
-    --secondary-color: #ff993b;
+    --primary-color: #000000;
+    --secondary-color: #ff0000;
     --dark-color: #292929;
     --white-color: #f2f8f4;
 }
